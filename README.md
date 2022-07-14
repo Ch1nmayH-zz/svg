@@ -1,0 +1,2 @@
+# svg
+SVG MANAGEMENT SYSTEM (Shri Siddavana Gurukula Management System) is a project in which we can manage all the activities of the hostel cum Gurukul. Here, in this project all the activities like creating a student batch to perform a specific task, attendance management system, student remarks, student performance and the concept of a student requesting for leave to accepting any apology letter of student can be done using this web application.
