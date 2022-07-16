@@ -1,5 +1,17 @@
 <?php
 
+session_start();
+
+if (!isset($_SESSION['id'])) {
+
+    echo "<script> alert('You are not authorized to visit this page'); 
+    location.href = '../index.php';</script>";
+} elseif ($_SESSION['role'] != 'admin') {
+
+    echo "<script> alert('You are not authorized to visit this page'); 
+    location.href = '../index.php';</script>";
+} elseif ($_SESSION['role'] == 'admin') {
+
 if (isset($_POST['add'])) {
 
     include "../includes/db_connection.php";
@@ -20,4 +32,9 @@ if ($result) {
 
 
     echo 'error';
+}
+} else {
+
+    echo "<script> alert('error'); 
+    location.href = './managers.inc.php';</script>";
 }
