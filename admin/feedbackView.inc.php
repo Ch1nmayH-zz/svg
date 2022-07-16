@@ -1,5 +1,15 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['id'])) {
+
+    echo "<script> alert('You are not authorized to visit this page'); 
+    location.href = '../index.php';</script>";
+} elseif ($_SESSION['role'] != 'admin') {
+
+    echo "<script> alert('You are not authorized to visit this page'); 
+    location.href = '../index.php';</script>";
+}
 include('../includes/db_connection.php');
 
 
