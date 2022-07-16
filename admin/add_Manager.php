@@ -2,16 +2,14 @@
 
 session_start();
 
-if (!$_SESSION['role'] == 'admin') {
+if (!isset($_SESSION['id'])) {
 
-    header("location:../index.php");
-}
+    echo "<script> alert('You are not authorized to visit this page'); 
+    location.href = '../index.php';</script>";
+} elseif ($_SESSION['role'] != 'admin') {
 
-
-
-if (isset($_POST['delete'])) {
-
-    echo "delete button pressed";
+    echo "<script> alert('You are not authorized to visit this page'); 
+    location.href = '../index.php';</script>";
 }
 ?>
 
