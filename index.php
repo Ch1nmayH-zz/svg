@@ -68,9 +68,9 @@ session_start();
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <?php
-                                             if(isset($_SESSION['id'])){
+                                    if (isset($_SESSION['id'])) {
 
-                                                echo "  <li class='nav-item'>
+                                        echo "  <li class='nav-item'>
                                                 <a class='nav-link' href='#'>Home</a>
                                             </li>
                                             <li class='nav-item'>
@@ -87,10 +87,10 @@ session_start();
                                         </li>
                                         </ul>
                                 <div class='sign_btn'><a href='logout.php'>Sign Out</a></div>";
-                                             }
+                                    }
 
-                                             if(!isset($_SESSION['id'])){
-                                             echo "
+                                    if (!isset($_SESSION['id'])) {
+                                        echo "
                                              <li class='nav-item'>
                                                 <a class='nav-link' href='#'>Home</a>
                                             </li>
@@ -102,8 +102,9 @@ session_start();
                                             </li>
                                             </ul>
                                     <div class='sign_btn'><a href='login.php'>Sign in</a></div>
-                                             ";}
-                                       ?>
+                                             ";
+                                    }
+                                    ?>
 
 
 
@@ -348,16 +349,18 @@ session_start();
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <form id="request" class="main_form">
+                            <form id="request" class="main_form" action="./includes/feedback.inc.php" method="POST">
                                 <div class="row">
 
 
                                     <div class="col-md-12">
-                                        <textarea class="textarea" placeholder="FeedBack" type="text"
-                                            Message="Name">Feedback </textarea>
+
+                                        <textarea class="textarea" placeholder="FeedBack" type="text" Message="Name"
+                                            name="feedback">Feedback </textarea>
+
                                     </div>
                                     <div class="col-sm-12">
-                                        <button class="send_btn">Send</button>
+                                        <button class="send_btn" name="feedbackSend">Send</button>
                                     </div>
                                 </div>
                             </form>
