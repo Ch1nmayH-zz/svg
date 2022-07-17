@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+
+    echo "<script> alert('You are already Logged in.');
+    location.href = './index.php';
+</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -174,11 +185,11 @@
 
                         <!--    
                             <?=
-                                $error = $_GET['error'];
+                            $error = $_GET['error'];
 
                             ?>
 
-                            <h1><?=$error?></h1> 
+                            <h1><?= $error ?></h1> 
                         
 -->
 

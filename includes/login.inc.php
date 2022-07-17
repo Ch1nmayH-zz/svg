@@ -59,8 +59,10 @@ if($result = mysqli_query($con,$sql)){
 
     else{
 
-        
-        echo "<script> alert('incorrect email and password');</script>";
+
+        echo "<script> alert('incorrect email and password');
+            location.href = '../login.php';
+        </script>";
         // header("location: ../login.php");
         // exit();
     }
