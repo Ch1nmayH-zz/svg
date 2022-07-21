@@ -24,14 +24,14 @@ $role = $_SESSION['role'];
     ?>
         <!-- <li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a></li> -->
         <li><a href="../index.php"><i class="fa fa-user"></i>Home</a></li>
-        <li><a href="my-profile.php"><i class="fa fa-user"></i> My Profile</a></li>
-        <li><a href="change-password.php"><i class="fa fa-files-o"></i>Change Password</a></li>
+        <li><a href="../includes/my-profile.php"><i class="fa fa-user"></i> My Profile</a></li>
+        <li><a href="../includes/changePassword.inc.php"><i class="fa fa-files-o"></i>Change Password</a></li>
         <li><a href="managers.inc.php"><i class="fa fa-files-o"></i>Manage Managers</a></li>
         <li><a href="students.inc.php"><i class="fa fa-files-o"></i>Manage Students</a></li>
         <li><a href="events.inc.php"><i class="fa fa-files-o"></i>Event Management</a></li>
         <li><a href=""><i class="fa fa-files-o"></i>Application</a></li>
         <li><a href=""><i class="fa fa-files-o"></i>View Payment</a></li>
-        <li><a href="../admin/feedbackView.inc.php"><i class="fa fa-files-o"></i>View Feedback</a></li>
+        <li><a href="../includes/feedbackView.inc.php"><i class="fa fa-files-o"></i>View Feedback</a></li>
         <!-- <li><a href="book-hostel.php"><i class="fa fa-file-o"></i>Book Hostel</a></li>
               <li><a href="room-details.php"><i class="fa fa-file-o"></i>Room Details</a></li>
               <li><a href="access-log.php"><i class="fa fa-file-o"></i>Access log</a></li> -->
@@ -41,8 +41,8 @@ $role = $_SESSION['role'];
         ?>
         <!-- <li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a></li> -->
         <li><a href="../index.php"><i class="fa fa-user"></i>Home</a></li>
-        <li><a href="my-profile.php"><i class="fa fa-user"></i> My Profile</a></li>
-        <li><a href="change-password.php"><i class="fa fa-files-o"></i>Change Password</a></li>
+        <li><a href="../includes/my-profile.php"><i class="fa fa-user"></i> My Profile</a></li>
+        <li><a href="../includes/changePassword.inc.php"><i class="fa fa-files-o"></i>Change Password</a></li>
         <li><a href="batches.inc.php"><i class="fa fa-files-o"></i>Manage Batches</a></li>
         <li><a href="studentRemarks.inc.php"><i class="fa fa-files-o"></i>Manage Student Remarks</a></li>
         <li><a href="#"><i class="fa fa-files-o"></i>Attendance Management</a></li>
@@ -58,13 +58,13 @@ $role = $_SESSION['role'];
         ?>
         <!-- <li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a></li> -->
         <li><a href="../index.php"><i class="fa fa-user"></i>Home</a></li>
-        <li><a href="my-profile.php"><i class="fa fa-user"></i> My Profile</a></li>
-        <li><a href="change-password.php"><i class="fa fa-files-o"></i>Change Password</a></li>
+        <li><a href="../includes/my-profile.php"><i class="fa fa-user"></i> My Profile</a></li>
+        <li><a href="../includes/changePassword.inc.php"><i class="fa fa-files-o"></i>Change Password</a></li>
         <li><a href="#"><i class="fa fa-files-o"></i>View Batches</a></li>
         <li><a href="#"><i class="fa fa-files-o"></i>View Event Details</a></li>
         <li><a href="#"><i class="fa fa-files-o"></i>Application</a></li>
         <li><a href="#"><i class="fa fa-files-o"></i>Fee payment</a></li>
-        <li><a href="#"><i class="fa fa-files-o"></i>Give Feedback</a></li>
+        <li><a href="../index.php#feedback"><i class="fa fa-files-o"></i>Give Feedback</a></li>
         <!-- <li><a href="book-hostel.php"><i class="fa fa-file-o"></i>Book Hostel</a></li>
               <li><a href="room-details.php"><i class="fa fa-file-o"></i>Room Details</a></li>
               <li><a href="access-log.php"><i class="fa fa-file-o"></i>Access log</a></li> -->

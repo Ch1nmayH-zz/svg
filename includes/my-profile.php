@@ -4,33 +4,29 @@ include('../includes/db_connection.php');
 // include ('../includes/login.inc.php');
 $id = $_SESSION['id'];
 
-if(isset($_POST['update']))
-{
-   
+if (isset($_POST['update'])) {
+
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
     $year = $_POST["year"];
     $course = $_POST["course"];
     $rollno = $_POST["rollno"];
-    $personalPh = $_POST["perPh"];
+    $personalPh = $_POST["personalPh"];
     // $parentPh = $_POST["parPh"];
     $email = $_POST["email"];
     // $pswd = $_POST["password"];
     // $cpswd = $_POST["cPassword"];
-$sql = "UPDATE  userdetails SET fname = '$fname', lname= '$lname' ,email= '$email' ,personalPh= '$personalPh' ,course = '$course',year= '$year',rollno= '$rollno' WHERE id = '$id'";
+    $sql = "UPDATE  userdetails SET fname = '$fname', lname= '$lname' ,email= '$email' ,personalPh= '$personalPh' ,course = '$course',year= '$year',rollno= '$rollno' WHERE id = '$id'";
 
 
-$result = mysqli_query($con,$sql);
-if($result){
+    $result = mysqli_query($con, $sql);
+    if ($result) {
 
 
-    echo"<script>alert('Profile updated Succssfully');</script>";
-}
-
-else{
-    echo"<script>alert('Profile updation failed');</script>";
-
-}
+        echo "<script>alert('Profile updated Succssfully');</script>";
+    } else {
+        echo "<script>alert('Profile updation failed');</script>";
+    }
 }
 ?>
 
@@ -60,20 +56,21 @@ else{
     </head>
 
     <body>
-        <?php include('../includes/header.php');?>
+        <?php include('../includes/header.php'); ?>
         <div class="ts-main-content">
-            <?php include('../includes/sidebar.php');?>
+            <?php include('../includes/sidebar.php'); ?>
             <div class="content-wrapper">
                 <div class="container-fluid">
-                    <?php	
-// $sid=isset($_SESSION['id']);
-	$sql="SELECT * from userdetails where id='$id'";
-		$result= mysqli_query($con,$sql);
-        while($row = mysqli_fetch_assoc($result)){
-?>
+                    <?php
+                // $sid=isset($_SESSION['id']);
+                $sql = "SELECT * from userdetails where id='$id'";
+                $result = mysqli_query($con, $sql);
+                while ($row = mysqli_fetch_assoc($result)) {
+                ?>
                     <div class="row">
                         <div class="col-md-12">
-                            <h2 class="page-title"><?php echo $row['fname']. " " .$row['lname'];?>'s&nbsp;Profile </h2>
+                            <h2 class="page-title"><?php echo $row['fname'] . " " . $row['lname']; ?>'s&nbsp;Profile
+                            </h2>
 
 
                             <div class="row">
@@ -81,7 +78,7 @@ else{
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
 
-                                            ID : &nbsp; <?php echo $_SESSION['id'];?>
+                                            ID : &nbsp; <?php echo $_SESSION['id']; ?>
                                         </div>
                                         <div class="panel-body">
                                             <form method="post" action="" name="registration" class="form-horizontal"
@@ -93,7 +90,7 @@ else{
                                                     <label class="col-sm-2 control-label"> Registration No : </label>
                                                     <div class="col-sm-8">
                                                         <input type="text" name="rollno" id="regno" class="form-control"
-                                                            required="required" value="<?php echo $row['rollno']?>">
+                                                            required="required" value="<?php echo $row['rollno'] ?>">
                                                     </div>
                                                 </div>
 
@@ -102,7 +99,7 @@ else{
                                                     <label class="col-sm-2 control-label">First Name : </label>
                                                     <div class="col-sm-8">
                                                         <input type="text" name="fname" id="fname" class="form-control"
-                                                            value="<?php echo $row['fname']?>" required="required">
+                                                            value="<?php echo $row['fname'] ?>" required="required">
                                                     </div>
                                                 </div>
 
@@ -110,7 +107,7 @@ else{
                                                     <label class="col-sm-2 control-label">Last Name : </label>
                                                     <div class="col-sm-8">
                                                         <input type="text" name="lname" id="mname" class="form-control"
-                                                            value="<?php echo $row['lname']?>">
+                                                            value="<?php echo $row['lname'] ?>">
                                                     </div>
                                                 </div>
 
@@ -118,7 +115,7 @@ else{
                                                     <label class="col-sm-2 control-label">Email : </label>
                                                     <div class="col-sm-8">
                                                         <input type="text" name="email" id="lname" class="form-control"
-                                                            value="<?php echo $row['email'];?>" required="required">
+                                                            value="<?php echo $row['email']; ?>" required="required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -126,7 +123,7 @@ else{
                                                     <div class="col-sm-8">
                                                         <input type="number" name="personalPh" id="lname"
                                                             class="form-control"
-                                                            value="<?php echo $row['personalPh'];?>"
+                                                            value="<?php echo $row['personalPh']; ?>"
                                                             required="required">
                                                     </div>
                                                 </div>
@@ -135,8 +132,8 @@ else{
                                                     <label class="col-sm-2 control-label">Course : </label>
                                                     <div class="col-sm-8">
                                                         <select name="course" class="form-control" required="required">
-                                                            <option value="<?php echo $row['course'];?>">
-                                                                <?php echo $row['course'];?></option>
+                                                            <option value="<?php echo $row['course']; ?>">
+                                                                <?php echo $row['course']; ?></option>
                                                             <option value="BCA">BCA</option>
                                                             <option value="BBA">BBA</option>
                                                             <option value="BCOM">BCOM</option>
@@ -151,14 +148,14 @@ else{
                                                     <label class="col-sm-2 control-label">Year </label>
                                                     <div class="col-sm-8">
                                                         <input type="text" name="year" id="contact" class="form-control"
-                                                            maxlength="10" value="<?php echo $row['year'];?>"
+                                                            maxlength="10" value="<?php echo $row['year']; ?>"
                                                             required="required">
                                                     </div>
                                                 </div>
 
 
 
-                                                <?php }?>
+                                                <?php } ?>
 
 
 

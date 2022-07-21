@@ -87,7 +87,9 @@
                                                 <td><?php echo $row['fname'] . " " . $row['lname']; ?></td>
                                                 <td><?php echo $row['email'] ?></td>
                                                 <td><?php echo $row['role'] ?></td>
-                                                <td><span class="badge badge-warning">Active</span></td>
+                                                <td><span
+                                                        class="badge badge-warning"><?php echo $row['status'] ?></span>
+                                                </td>
                                                 <td><button class="btn btn-sm btn-danger" name="delete">
                                                         Delete
                                                     </button>

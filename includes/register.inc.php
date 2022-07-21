@@ -13,6 +13,7 @@ if(isset($_POST['sub'])){
     $email = $_POST["email"];
     $pswd = $_POST["password"];
     $cpswd = $_POST["cPassword"];
+    
     // $role = 'student';
     // $remarks = 'N.A';
 
@@ -53,7 +54,7 @@ if($pswd != $cpswd){
 }
 
 else{
-    $sql = "INSERT INTO userdetails(fname,lname,email,personalPh,parentPh,course,year,rollno,pswd,role,remarks) values('$fname','$lname','$email','$personalPh','$parentPh','$course','$year','$rollno','$pswd','student','N.A')";
+    $sql = "INSERT INTO userdetails(fname,lname,email,personalPh,parentPh,course,year,rollno,pswd,role,remarks,status) values('$fname','$lname','$email','$personalPh','$parentPh','$course','$year','$rollno','$pswd','student','N.A','Pending')";
 
     $result = mysqli_query($con, $sql);
     if($result){
