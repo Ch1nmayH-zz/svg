@@ -73,11 +73,11 @@ User -
 
 6.Software requirement
 
-	Web Technology: PHP 5.4
-	Web Components: HTML5/CSS/JavaScript
-	Software’s: XAMPP, VS Code editor
-	Database (Backend): MYSQL server
-	Web Server: Apache
+->	Web Technology: PHP 5.4
+->	Web Components: HTML5/CSS/JavaScript
+->	Software’s: XAMPP, VS Code editor
+->	Database (Backend): MYSQL server
+->	Web Server: Apache
 
 
 7.Advantage/Benefit.
@@ -85,11 +85,11 @@ User -
 •	Low budget web development
 •	Online payment method
 
-8.   Limitations:
+8. Limitations:
 ·       Need Internet access 
 ·       Manual update is needed 
 ·       Users need to have basic understanding of how the web works.
  
-9.     Future scope:
+9. Future scope:
 •	Qr code scan
 •	Parental Control
