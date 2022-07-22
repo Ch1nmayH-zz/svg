@@ -48,7 +48,7 @@ $role = $_SESSION['role'];
         <li><a href="#"><i class="fa fa-files-o"></i>Attendance Management</a></li>
         <li><a href="events.inc.php"><i class="fa fa-files-o"></i>Event Management</a></li>
         <li><a href="#"><i class="fa fa-files-o"></i>Application</a></li>
-        <li><a href="feedback.inc.php"><i class="fa fa-files-o"></i>View Feedback</a></li>
+        <li><a href="../includes/feedbackView.inc.php"><i class="fa fa-files-o"></i>View Feedback</a></li>
         <!-- <li><a href="book-hostel.php"><i class="fa fa-file-o"></i>Book Hostel</a></li>
               <li><a href="room-details.php"><i class="fa fa-file-o"></i>Room Details</a></li>
               <li><a href="access-log.php"><i class="fa fa-file-o"></i>Access log</a></li> -->
