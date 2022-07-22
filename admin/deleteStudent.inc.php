@@ -46,6 +46,96 @@ if (!isset($_SESSION['id'])) {
             echo "<script> alert('error'); 
         location.href = './students.inc.php';</script>";
         }
+    } elseif (isset($_POST['suspend'])) {
+
+
+
+        $id = $_POST['id'];
+
+
+
+        $sql1 = "SELECT * FROM userdetails WHERE `id` = '$id'";
+
+        if ($result = mysqli_query($con, $sql1)) {
+
+            if (mysqli_num_rows($result) > 0) {
+
+                $sql = "UPDATE  userdetails SET `status` = 'Suspended' WHERE `id` = '$id'";
+
+                if (mysqli_query($con, $sql)) {
+
+                    echo "<script> alert('Student Suspended'); 
+                location.href = './students.inc.php';</script>";;
+                } else {
+
+                    echo "<script> alert('error'); 
+                location.href = './students.inc.php';</script>";
+                }
+            }
+        } else {
+            echo "<script> alert('error'); 
+        location.href = './students.inc.php';</script>";
+        }
+    } elseif (isset($_POST['approve'])) {
+
+
+
+        $id = $_POST['id'];
+
+
+
+        $sql1 = "SELECT * FROM userdetails WHERE `id` = '$id'";
+
+        if ($result = mysqli_query($con, $sql1)) {
+
+            if (mysqli_num_rows($result) > 0) {
+
+                $sql = "UPDATE  userdetails SET `status` = 'Active' WHERE `id` = '$id'";
+
+                if (mysqli_query($con, $sql)) {
+
+                    echo "<script> alert('Student Approved'); 
+                location.href = './students.inc.php';</script>";;
+                } else {
+
+                    echo "<script> alert('error'); 
+                location.href = './students.inc.php';</script>";
+                }
+            }
+        } else {
+            echo "<script> alert('error'); 
+        location.href = './students.inc.php';</script>";
+        }
+    } elseif (isset($_POST['reassign'])) {
+
+
+
+        $id = $_POST['id'];
+
+
+
+        $sql1 = "SELECT * FROM userdetails WHERE `id` = '$id'";
+
+        if ($result = mysqli_query($con, $sql1)) {
+
+            if (mysqli_num_rows($result) > 0) {
+
+                $sql = "UPDATE  userdetails SET `status` = 'Active' WHERE `id` = '$id'";
+
+                if (mysqli_query($con, $sql)) {
+
+                    echo "<script> alert('Student reassigned'); 
+                location.href = './students.inc.php';</script>";;
+                } else {
+
+                    echo "<script> alert('error'); 
+                location.href = './students.inc.php';</script>";
+                }
+            }
+        } else {
+            echo "<script> alert('error'); 
+        location.href = './students.inc.php';</script>";
+        }
     } else {
         echo "<script> alert('error'); 
     location.href = './students.inc.php';</script>";

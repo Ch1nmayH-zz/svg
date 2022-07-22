@@ -95,8 +95,8 @@ include('../includes/db_connection.php');
                                             <td><?php echo $row['pswd'] ?></td>
                                             <td><span class="badge badge-warning"><?php echo $row['status'] ?></span>
                                             </td>
-                                            <td><button class="btn btn-sm btn-danger" name="delete">
-                                                    Delete
+                                            <td><button class="btn btn-sm btn-danger" name="reassign">
+                                                    Reassign
                                                 </button>
                                             </td>
                                         </tr>
